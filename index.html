@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALKULATOR ŁADUNKÓW</title>
+
+    <!-- Bootstrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- Personal files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h1 class="text-center">KALKULATOR ŁADUNKÓW PONADNORMATYWNYCH</h1>
+
+        <div id="main">
+
+            <div class="row col-12 text-center">
+
+                <div class="col-6">
+                    <h3><b>WYBIERZ ZESTAW</b></h3>
+                    <select id="trucks" name="trucks" onchange="displayTrucks()" class="select">
+                        <option id="none" value="none" selected>NIE WYBRANO</option>
+                        <option id="scania" value="Scania">Scania</option>
+                        <option id="volvo" value="Volvo">Volvo</option>
+                        <option id="daf" value="DAF">DAF</option>
+                    </select>
+                </div>
+
+                <div id="trailer" class="col-6">
+                    <h3><b>WYBIERZ NACZEPĘ</b></h3>
+                    <select id="trailers" name="trailers" onchange="displayTrailers()" class="select">
+                        <option id="none" value="none" selected>NIE WYBRANO</option>
+                        <option id="nooteboom" value="Nooteboom">Nooteboom</option>
+                        <option id="goldhofer" value="Goldhofer">Goldhofer</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div id="cargo">
+
+                <div style="order: 1; padding: 0.5rem; padding-right: 1em;">
+
+                    <h4><b>WPISZ WYMIARY ŁADUNKU</b></h4>
+
+                    <label for="cargo-h" class="label">Wysokość ładunku</label>
+                    <br>
+                    <input type="number" id="cargo-h" class="cargo" name="cargo-h" size="10" placeholder="centymetry">
+                    <br>
+                    <label for="cargo-w" class="label text-start">Szerokość ładunku</label>
+                    <br>
+                    <input type="number" id="cargo-w" class="cargo" name="cargo-w" size="10" placeholder="centymetry">
+                    <br>
+                    <label for="cargo-l" class="label">Długość ładunku</label>
+                    <br>
+                    <input type="number" id="cargo-l" class="cargo" name="cargo-l" size="10" placeholder="centymetry">
+                    <br>
+                    <label for="cargo-t" class="label">Waga ładunku</label>
+                    <br>
+                    <input type="number" id="cargo-t" class="cargo" name="cargo-t" size="10" placeholder="kilogramy">
+
+                </div>
+
+                <br>
+
+                <div style="order: 2; padding: 0.5rem; padding-left: 1em;">
+
+                    <h4><b>ŁĄCZNE WYMIARY</b></h4>
+
+                    <div class="p-2">
+                        WYSOKOŚĆ
+                        <br>
+                        <p id="height" class="text-center" style="background-color: white; color: black;">Tu pokaże się
+                            wynik</p>
+                    </div>
+
+                    <div class="p-2">
+                        SZEROKOŚĆ
+                        <br>
+                        <p id="width" class="text-center" style="background-color: white; color: black;">Tu pokaże się
+                            wynik</p>
+                    </div>
+
+                    <div class="p-2">
+                        DŁUGOŚĆ
+                        <br>
+                        <p id="long" class="text-center" style="background-color: white; color: black;">Tu pokaże się
+                            wynik</p>
+                    </div>
+
+                    <div class="p-2">
+                        WAGA
+                        <br>
+                        <p id="weight" class="text-center" style="background-color: white; color: black;">Tu pokaże się
+                            wynik</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="footer" class="text-center">
+            <div>
+                <h5>AUTORSTWA:</h5>
+                <a href="https://patryk-pietrzyk.pl" target="_blank" class="link link-secondary">
+                    <p>Patryk Pietrzyk</p>
+                </a>
+            </div>
+
+            <div class="row col-12">
+
+                <div class="col-6">
+                    <p class="link link-secondary">2022 &copy; Wszelkie Prawa Zastrzeżone</p>
+                </div>
+
+                <div class="col-6">
+                    <a href="privacy.html" class="link link-secondary">
+                        <p>Polityka prywatności</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

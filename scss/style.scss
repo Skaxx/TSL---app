@@ -1,0 +1,72 @@
+body {
+  box-sizing: border-box;
+  width: 100%;
+
+  background-image: url(../img/repeated-square-dark.png);
+  color: white;
+
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+
+  .content {
+    h1 {
+      padding: 0.5em;
+    }
+
+    #main {
+      h4 {
+        margin-top: 2.5em;
+        padding: 0.5em;
+
+        text-align: start;
+      }
+
+      #cargo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-top: 1em;
+
+        .label {
+          max-width: 10em;
+        }
+
+        .cargo {
+          margin: 1em;
+          max-width: 15em;
+
+          text-align: center;
+        }
+
+        input {
+          text-align: center;
+          margin-left: 15%;
+        }
+      }
+
+      .select {
+        min-width: 6em;
+        max-width: 10em;
+
+        font-size: x-large;
+      }
+    }
+
+    #footer {
+      background-image: url(../img/noise_lines.png);
+
+      margin-top: 300px;
+
+      h5 {
+        color: black;
+        padding: 0.5em;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
