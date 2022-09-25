@@ -55,20 +55,26 @@ let Goldhofer = {
   long: 1250,
   weight: 1350,
 };
+/// TRYING ///
+let sumWeight = 0;
+
+
+//ADDING TRUCKS & TRAILERS
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("trucks").onchange = function displayTrucks() {
-    if (this.value == "none") {
-      document.getElementById("height").innerHTML = none.height;
-      document.getElementById("width").innerHTML = none.width;
-      document.getElementById("long").innerHTML = none.long;
-      document.getElementById("weight").innerHTML = none.weight;
-    }
+    // if (this.value == "none") {
+    //   document.getElementById("height").innerHTML = none.height;
+    //   document.getElementById("width").innerHTML = none.width;
+    //   document.getElementById("long").innerHTML = none.long;
+    //   document.getElementById("weight").innerHTML = none.weight;
+    // }
     if (this.value == "Scania") {
       document.getElementById("height").innerHTML = Scania.height + " cm";
       document.getElementById("width").innerHTML = Scania.width + " cm";
       document.getElementById("long").innerHTML = Scania.long + " cm";
-      document.getElementById("weight").innerHTML = Scania.weight + " kg";
+      sumWeight = Number(sumWeight + Scania.weight);
+      document.getElementById("weight").innerHTML = sumWeight + " kg";
     }
     if (this.value == "Volvo") {
       document.getElementById("height").innerHTML = Volvo.height + " cm";
@@ -95,7 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("height").innerHTML = Nooteboom.height + " cm";
       document.getElementById("width").innerHTML = Nooteboom.width + " cm";
       document.getElementById("long").innerHTML = Nooteboom.long + " cm";
-      document.getElementById("weight").innerHTML = Nooteboom.weight + " kg";
+      sumWeight += Nooteboom.weight;
+      document.getElementById("weight").innerHTML = sumWeight + " kg";
     }
     if (this.value == "Goldhofer") {
       document.getElementById("height").innerHTML = Goldhofer.height + " cm";
@@ -105,5 +112,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  //ADDING VALUES
+
+  let btn1 = document.querySelector("#submitBtn");
+
+  let cargoHeight = document.querySelector("#cargo-h");
+  let cargoWidth = document.querySelector("#cargo-w");
+  let cargoLong = document.querySelector("#cargo-l");
+  let cargoTons = document.querySelector("#cargo-t");
+
+  let outputField1 = document.querySelector("#height");
+  let outputField2 = document.querySelector("#width");
+  let outputField3 = document.querySelector("#long");
+  let outputField4 = document.querySelector("#weight");
+
+  btn1.addEventListener("click", () => {
+    outputField1.innerHTML = cargoHeight.value + " cm";
+    outputField2.innerHTML = cargoWidth.value + " cm";
+    outputField3.innerHTML = cargoLong.value + " cm";
+    sumWeight = sumWeight + Number(cargoTons.value);
+    outputField4.innerHTML = sumWeight + " kg";
+  });
+
+  //END OF ADDING VALUES
+
+  //SUMMING UP
+
+  //END OF SUMMING UP
+
   console.log("DOM has been fully loaded and parsed.");
 });
+
+//END OF ADDING TRUCKS & TRAILERS

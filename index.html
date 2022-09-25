@@ -31,7 +31,7 @@
 
         <div id="main">
 
-            <div class="row col-12 text-center">
+            <div id="selectField" class="row col-12">
 
                 <div class="col-6">
                     <h3><b>WYBIERZ ZESTAW</b></h3>
@@ -43,7 +43,7 @@
                     </select>
                 </div>
 
-                <div id="trailer" class="col-6">
+                <div class="col-6">
                     <h3><b>WYBIERZ NACZEPĘ</b></h3>
                     <select id="trailers" name="trailers" onchange="displayTrailers()" class="select">
                         <option id="none" value="none" selected>NIE WYBRANO</option>
@@ -57,31 +57,43 @@
 
             <div id="cargo">
 
-                <div style="order: 1; padding: 0.5rem; padding-right: 1em;">
+                <div style="order: 1; padding: 1rem;">
 
                     <h4><b>WPISZ WYMIARY ŁADUNKU</b></h4>
 
                     <label for="cargo-h" class="label">Wysokość ładunku</label>
                     <br>
-                    <input type="number" id="cargo-h" class="cargo" name="cargo-h" size="10" placeholder="centymetry">
+
+                    <input type="number" id="cargo-h" class="cargo" size="10" placeholder="Podaj centymetry">
                     <br>
+
                     <label for="cargo-w" class="label text-start">Szerokość ładunku</label>
                     <br>
-                    <input type="number" id="cargo-w" class="cargo" name="cargo-w" size="10" placeholder="centymetry">
+
+                    <input type="number" id="cargo-w" class="cargo" size="10" placeholder="Podaj centymetry">
                     <br>
+
                     <label for="cargo-l" class="label">Długość ładunku</label>
                     <br>
-                    <input type="number" id="cargo-l" class="cargo" name="cargo-l" size="10" placeholder="centymetry">
+
+                    <input type="number" id="cargo-l" class="cargo" size="10" placeholder="Podaj centymetry">
                     <br>
+
                     <label for="cargo-t" class="label">Waga ładunku</label>
                     <br>
-                    <input type="number" id="cargo-t" class="cargo" name="cargo-t" size="10" placeholder="kilogramy">
+
+                    <input type="number" id="cargo-t" class="cargo" size="10" placeholder="Podaj kilogramy">
+                    <br>
+
+                    <button type="submit" id="submitBtn" class="btn btn-success">
+                        Dodaj podane wymiary
+                    </button>
 
                 </div>
 
                 <br>
 
-                <div style="order: 2; padding: 0.5rem; padding-left: 1em;">
+                <div style="order: 2; padding: 1rem;">
 
                     <h4><b>ŁĄCZNE WYMIARY</b></h4>
 

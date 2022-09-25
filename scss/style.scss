@@ -16,9 +16,21 @@ body {
     #main {
       h4 {
         margin-top: 2.5em;
-        padding: 0.5em;
 
-        text-align: start;
+        text-align: center;
+      }
+
+      #selectField {
+        text-align: center;
+
+        .select {
+          padding: 1em;
+
+          min-width: 5em;
+          max-width: 10em;
+
+          font-size: x-large;
+        }
       }
 
       #cargo {
@@ -44,13 +56,10 @@ body {
           text-align: center;
           margin-left: 15%;
         }
-      }
 
-      .select {
-        min-width: 6em;
-        max-width: 10em;
-
-        font-size: x-large;
+        button {
+          margin-left: 15%;
+        }
       }
     }
 
