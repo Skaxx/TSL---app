@@ -1,39 +1,30 @@
-let none = {
-  id: 0,
-  name: "none",
-  height: "Tu pokaże się wynik",
-  width: "Tu pokaże się wynik",
-  long: "Tu pokaże się wynik",
-  weight: "Tu pokaże się wynik",
-};
-
 // Trucks
 
-let Scania = {
+const Scania = {
   id: 1,
   name: "Scania",
-  height: 350,
-  width: 250,
-  long: 650,
-  weight: 12000,
+  height: 1,
+  width: 1,
+  long: 1,
+  weight: 1,
 };
 
 let Volvo = {
   id: 2,
   name: "Volvo",
-  height: 450,
-  width: 350,
-  long: 850,
-  weight: 18000,
+  height: 2,
+  width: 2,
+  long: 2,
+  weight: 2,
 };
 
 let DAF = {
   id: 3,
   name: "DAF",
-  height: 550,
-  width: 150,
-  long: 1250,
-  weight: 21000,
+  height: 3,
+  width: 3,
+  long: 3,
+  weight: 3,
 };
 
 // Trailers
@@ -41,90 +32,121 @@ let DAF = {
 let Nooteboom = {
   id: 1,
   name: "Nooteboom",
-  height: 75,
-  width: 200,
-  long: 1000,
-  weight: 1500,
+  height: 10,
+  width: 10,
+  long: 10,
+  weight: 10,
 };
 
 let Goldhofer = {
   id: 2,
   name: "Goldhofer",
-  height: 80,
-  width: 225,
-  long: 1250,
-  weight: 1350,
+  height: 20,
+  width: 20,
+  long: 20,
+  weight: 20,
 };
-/// TRYING ///
-let sumWeight = 0;
 
+let sumHeightTruck = 0;
+let sumWidthTruck = 0;
+let sumLongTruck = 0;
+let sumWeightTruck = 0;
+
+let sumHeightTrailer = 0;
+let sumWidthTrailer = 0;
+let sumLongTrailer = 0;
+let sumWeightTrailer = 0;
 
 //ADDING TRUCKS & TRAILERS
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("trucks").onchange = function displayTrucks() {
-    // if (this.value == "none") {
-    //   document.getElementById("height").innerHTML = none.height;
-    //   document.getElementById("width").innerHTML = none.width;
-    //   document.getElementById("long").innerHTML = none.long;
-    //   document.getElementById("weight").innerHTML = none.weight;
-    // }
-    if (this.value == "Scania") {
-      document.getElementById("height").innerHTML = Scania.height + " cm";
-      document.getElementById("width").innerHTML = Scania.width + " cm";
-      document.getElementById("long").innerHTML = Scania.long + " cm";
-      sumWeight = Number(sumWeight + Scania.weight);
-      document.getElementById("weight").innerHTML = sumWeight + " kg";
+    if (this.value === "Scania") {
+      sumHeightT1 = Number(sumHeightTruck - sumHeightTruck + Scania.height);
+      document.getElementById("height").innerHTML = sumHeightT1 + " cm";
+
+      sumWidthT1 = Number(sumWidthTruck - sumWidthTruck + Scania.width);
+      document.getElementById("width").innerHTML = sumWidthT1 + " cm";
+
+      sumLongT1 = Number(sumLongTruck - sumLongTruck + Scania.long);
+      document.getElementById("long").innerHTML = sumLongT1 + " cm";
+
+      sumWeightT1 = Number(sumWeightTruck - sumWeightTruck + Scania.weight);
+      document.getElementById("weight").innerHTML = sumWeightT1 + " kg";
     }
-    if (this.value == "Volvo") {
-      document.getElementById("height").innerHTML = Volvo.height + " cm";
-      document.getElementById("width").innerHTML = Volvo.width + " cm";
-      document.getElementById("long").innerHTML = Volvo.long + " cm";
-      document.getElementById("weight").innerHTML = Volvo.weight + " kg";
+
+    if (this.value === "Volvo") {
+      sumHeightT2 = Number(sumHeightTruck - sumHeightTruck + Volvo.height);
+      document.getElementById("height").innerHTML = sumHeightT2 + " cm";
+
+      sumWidthT2 = Number(sumWidthTruck - sumWidthTruck + Volvo.width);
+      document.getElementById("width").innerHTML = sumWidthT2 + " cm";
+
+      sumLongT2 = Number(sumLongTruck - sumLongTruck + Volvo.long);
+      document.getElementById("long").innerHTML = sumLongT2 + " cm";
+
+      sumWeightT2 = Number(sumWeightTruck - sumWeightTruck + Volvo.weight);
+      document.getElementById("weight").innerHTML = sumWeightT2 + " kg";
     }
-    if (this.value == "DAF") {
-      document.getElementById("height").innerHTML = DAF.height + " cm";
-      document.getElementById("width").innerHTML = DAF.width + " cm";
-      document.getElementById("long").innerHTML = DAF.long + " cm";
-      document.getElementById("weight").innerHTML = DAF.weight + " kg";
+
+    if (this.value === "DAF") {
+      sumHeightT3 = Number(sumHeightTruck - sumHeightTruck + DAF.height);
+      document.getElementById("height").innerHTML = sumHeightT3 + " cm";
+
+      sumWidthT3 = Number(sumWidthTruck - sumWidthTruck + DAF.width);
+      document.getElementById("width").innerHTML = sumWidthT3 + " cm";
+
+      sumLongT3 = Number(sumLongTruck - sumLongTruck + DAF.long);
+      document.getElementById("long").innerHTML = sumLongT3 + " cm";
+
+      sumWeightT3 = Number(sumWeightTruck - sumWeightTruck + DAF.weight);
+      document.getElementById("weight").innerHTML = sumWeightT3 + " kg";
     }
   };
 
   document.getElementById("trailers").onchange = function displayTrailers() {
-    if (this.value == "none") {
-      document.getElementById("height").innerHTML = none.height;
-      document.getElementById("width").innerHTML = none.width;
-      document.getElementById("long").innerHTML = none.long;
-      document.getElementById("weight").innerHTML = none.weight;
+    if (this.value === "Nooteboom") {
+      sumHeightTR1 = Number(sumHeightTrailer - sumHeightTrailer + Nooteboom.height);
+      document.getElementById("height").innerHTML = sumHeightTR1 + " cm";
+
+      sumWidthTR1 = Number(sumWidthTrailer - sumWidthTrailer + Nooteboom.width);
+      document.getElementById("width").innerHTML = sumWidthTR1 + " cm";
+
+      sumLongTR1 = Number(sumLongTrailer - sumLongTrailer + Nooteboom.long);
+      document.getElementById("long").innerHTML = sumLongTR1 + " cm";
+
+      sumWeightTR1 = Number(sumWeightTrailer - sumWeightTrailer + Nooteboom.weight);
+      document.getElementById("weight").innerHTML = sumWeightTR1 + " kg";
     }
-    if (this.value == "Nooteboom") {
-      document.getElementById("height").innerHTML = Nooteboom.height + " cm";
-      document.getElementById("width").innerHTML = Nooteboom.width + " cm";
-      document.getElementById("long").innerHTML = Nooteboom.long + " cm";
-      sumWeight += Nooteboom.weight;
-      document.getElementById("weight").innerHTML = sumWeight + " kg";
-    }
-    if (this.value == "Goldhofer") {
-      document.getElementById("height").innerHTML = Goldhofer.height + " cm";
-      document.getElementById("width").innerHTML = Goldhofer.width + " cm";
-      document.getElementById("long").innerHTML = Goldhofer.long + " cm";
-      document.getElementById("weight").innerHTML = Goldhofer.weight + " kg";
+
+    if (this.value === "Goldhofer") {
+      sumHeightTR2 = Number(sumHeightTrailer - sumHeightTrailer + Goldhofer.height);
+      document.getElementById("height").innerHTML = sumHeightTR2 + " cm";
+
+      sumWidthTR2 = Number(sumWidthTrailer - sumWidthTrailer + Goldhofer.width);
+      document.getElementById("width").innerHTML = sumWidthTR2 + " cm";
+
+      sumLongTR2 = Number(sumLongTrailer - sumLongTrailer + Goldhofer.long);
+      document.getElementById("long").innerHTML = sumLongTR2 + " cm";
+
+      sumWeightTR2 = Number(sumWeightTrailer - sumWeightTrailer + Goldhofer.weight);
+      document.getElementById("weight").innerHTML = sumWeightTR2 + " kg";
     }
   };
 
   //ADDING VALUES
 
-  let btn1 = document.querySelector("#submitBtn");
+  let btn1 = document.getElementById("submitBtn");
 
-  let cargoHeight = document.querySelector("#cargo-h");
-  let cargoWidth = document.querySelector("#cargo-w");
-  let cargoLong = document.querySelector("#cargo-l");
-  let cargoTons = document.querySelector("#cargo-t");
+  let cargoHeight = document.getElementById("cargo-h");
+  let cargoWidth = document.getElementById("cargo-w");
+  let cargoLong = document.getElementById("cargo-l");
+  let cargoTons = document.getElementById("cargo-t");
 
-  let outputField1 = document.querySelector("#height");
-  let outputField2 = document.querySelector("#width");
-  let outputField3 = document.querySelector("#long");
-  let outputField4 = document.querySelector("#weight");
+  let outputField1 = document.getElementById("height");
+  let outputField2 = document.getElementById("width");
+  let outputField3 = document.getElementById("long");
+  let outputField4 = document.getElementById("weight");
 
   btn1.addEventListener("click", () => {
     outputField1.innerHTML = cargoHeight.value + " cm";
@@ -135,10 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //END OF ADDING VALUES
-
-  //SUMMING UP
-
-  //END OF SUMMING UP
 
   console.log("DOM has been fully loaded and parsed.");
 });
