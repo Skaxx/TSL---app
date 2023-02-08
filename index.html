@@ -33,9 +33,9 @@
 
             <div id="selectField" class="row col-12">
 
-                <div class="col-6">
-                    <h3><b>WYBIERZ ZESTAW</b></h3>
-                    <select id="trucks" name="trucks" onchange="displayTrucks()" class="select">
+                <div class="col-4">
+                    <h3>WYBIERZ ZESTAW</h3>
+                    <select id="trucks" name="trucks" class="select">
                         <option id="none" value="none" selected>NIE WYBRANO &nbsp;</option>
                         <option id="scania" value="Scania">Scania</option>
                         <option id="volvo" value="Volvo">Volvo</option>
@@ -43,116 +43,65 @@
                     </select>
                 </div>
 
-                <div class="col-6">
-                    <h3><b>WYBIERZ NACZEPĘ</b></h3>
-                    <select id="trailers" name="trailers" onchange="displayTrailers()" class="select">
+                <div class="col-4">
+                    <h3>WYBIERZ NACZEPĘ</h3>
+                    <select id="trailers" name="trailers" class="select">
                         <option id="none" value="none" selected>NIE WYBRANO &nbsp;</option>
                         <option id="nooteboom" value="Nooteboom">Nooteboom</option>
                         <option id="goldhofer" value="Goldhofer">Goldhofer</option>
                     </select>
                 </div>
-
+                <button id="btnAdding" class="btn btn-success col-4" onclick="onClick()">Dodaj wybrane</button>
             </div>
 
 
-            <div id="cargo">
+            <div id="totalValue">
+                <h4>ŁĄCZNE WYMIARY</h4>
 
-                <div style="order: 1; padding: 1rem;">
-
-                    <h4><b>WPISZ WYMIARY ŁADUNKU</b></h4>
-
-                    <label for="cargo-h" class="label">Wysokość ładunku</label>
-                    <br>
-
-                    <input type="number" id="cargo-h" class="cargo" size="10" placeholder="Podaj centymetry">
-                    <br>
-
-                    <label for="cargo-w" class="label text-start">Szerokość ładunku</label>
-                    <br>
-
-                    <input type="number" id="cargo-w" class="cargo" size="10" placeholder="Podaj centymetry">
-                    <br>
-
-                    <label for="cargo-l" class="label">Długość ładunku</label>
-                    <br>
-
-                    <input type="number" id="cargo-l" class="cargo" size="10" placeholder="Podaj centymetry">
-                    <br>
-
-                    <label for="cargo-t" class="label">Waga ładunku</label>
-                    <br>
-
-                    <input type="number" id="cargo-t" class="cargo" size="10" placeholder="Podaj kilogramy">
-                    <br>
-
-                    <button type="submit" id="submitBtn" class="btn btn-success">
-                        Dodaj podane wymiary
-                    </button>
-
+                <div>
+                    <p class="txt">WYSOKOŚĆ</p>
+                    <p id="height" class="dimensions">Tu pokaże się wynik</p>
                 </div>
 
-                <br>
-
-                <div style="order: 2; padding: 1rem;">
-
-                    <h4><b>ŁĄCZNE WYMIARY</b></h4>
-
-                    <div class="p-2">
-                        WYSOKOŚĆ
-                        <br>
-                        <p id="height" class="text-center" style="background-color: white; color: black;">Tu pokaże się
-                            wynik</p>
-                    </div>
-
-                    <div class="p-2">
-                        SZEROKOŚĆ
-                        <br>
-                        <p id="width" class="text-center" style="background-color: white; color: black;">Tu pokaże się
-                            wynik</p>
-                    </div>
-
-                    <div class="p-2">
-                        DŁUGOŚĆ
-                        <br>
-                        <p id="long" class="text-center" style="background-color: white; color: black;">Tu pokaże się
-                            wynik</p>
-                    </div>
-
-                    <div class="p-2">
-                        WAGA
-                        <br>
-                        <p id="weight" class="text-center" style="background-color: white; color: black;">Tu pokaże się
-                            wynik</p>
-                    </div>
-
+                <div>
+                    <p class="txt">SZEROKOŚĆ</p>
+                    <p id="width" class="dimensions">Tu pokaże się wynik</p>
                 </div>
 
+                <div>
+                    <p class="txt">DŁUGOŚĆ</p>
+                    <p id="long" class="dimensions">Tu pokaże się wynik</p>
+                </div>
+
+                <div>
+                    <p class="txt">WAGA</p>
+                    <p id="weight" class="dimensions">Tu pokaże się wynik</p>
+                </div>
             </div>
 
         </div>
+    </div>
 
-        <div id="footer" class="text-center">
-            <div>
-                <h5>AUTORSTWA:</h5>
-                <a href="https://patryk-pietrzyk.pl" target="_blank" class="link link-secondary">
-                    <p>Patryk Pietrzyk</p>
+    <div id="footer" class="text-center">
+        <div>
+            <h5>AUTORSTWA:</h5>
+            <a href="https://patryk-pietrzyk.pl" target="_blank" class="link link-secondary">
+                <p>Patryk Pietrzyk</p>
+            </a>
+        </div>
+
+        <div class="row col-12">
+
+            <div class="col-6">
+                <p class="link link-secondary">2022 &copy; Wszelkie Prawa Zastrzeżone</p>
+            </div>
+
+            <div class="col-6">
+                <a href="privacy.html" class="link link-secondary">
+                    <p>Polityka prywatności</p>
                 </a>
             </div>
-
-            <div class="row col-12">
-
-                <div class="col-6">
-                    <p class="link link-secondary">2022 &copy; Wszelkie Prawa Zastrzeżone</p>
-                </div>
-
-                <div class="col-6">
-                    <a href="privacy.html" class="link link-secondary">
-                        <p>Polityka prywatności</p>
-                    </a>
-                </div>
-            </div>
         </div>
-
     </div>
 
 </body>

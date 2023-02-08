@@ -1,66 +1,43 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 100%;
   background-image: url(../img/repeated-square-dark.png);
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: larger;
-}
-body .content h1 {
-  padding: 0.5em;
-}
-body .content #main h4 {
-  margin-top: 2.5em;
-  text-align: center;
-}
-body .content #main #selectField {
-  text-align: center;
-}
-body .content #main #selectField .select {
-  padding: 0.25em;
-  min-width: 5em;
-  max-width: 10em;
   font-size: large;
 }
-body .content #main #cargo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1em;
-}
-body .content #main #cargo .label {
-  max-width: 10em;
-}
-body .content #main #cargo .cargo {
-  margin: 1em;
-  max-width: 15em;
+body .content #selectField {
   text-align: center;
 }
-body .content #main #cargo input {
+body .content #selectField .select {
+  padding: 0.25em;
+}
+body .content #selectField #btnAdding {
+  margin: auto;
+}
+body .content #totalValue {
   text-align: center;
-  margin-left: 15%;
 }
-body .content #main #cargo button {
-  margin-left: 15%;
+body .content #totalValue h4 {
+  margin-top: 2.5em;
 }
-body .content #footer {
+body .content #totalValue .txt {
+  padding: 0.25em;
+}
+body .content #totalValue .dimensions {
+  margin: auto;
+  background-color: white;
+  color: black;
+  width: 25%;
+}
+body #footer {
   background-image: url(../img/noise_lines.png);
   margin-top: 300px;
 }
-body .content #footer h5 {
+body #footer h5 {
   color: black;
   padding: 0.5em;
 }
-body .content #footer a {
+body #footer a {
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

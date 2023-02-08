@@ -1,81 +1,56 @@
 body {
   box-sizing: border-box;
-  width: 100%;
-
   background-image: url(../img/repeated-square-dark.png);
   color: white;
 
   font-family: "Roboto", sans-serif;
-  font-size: larger;
+  font-size: large;
 
   .content {
-    h1 {
+    #selectField {
+      text-align: center;
+
+      .select {
+        padding: 0.25em;
+      }
+
+      #btnAdding {
+        margin: auto;
+      }
+    }
+
+    #totalValue {
+      text-align: center;
+
+      h4 {
+        margin-top: 2.5em;
+      }
+
+      .txt {
+        padding: 0.25em;
+      }
+
+      .dimensions {
+        margin: auto;
+        background-color: white;
+        color: black;
+        width: 25%;
+      }
+    }
+  }
+
+  #footer {
+    background-image: url(../img/noise_lines.png);
+
+    margin-top: 300px;
+
+    h5 {
+      color: black;
       padding: 0.5em;
     }
 
-    #main {
-      h4 {
-        margin-top: 2.5em;
-
-        text-align: center;
-      }
-
-      #selectField {
-        text-align: center;
-
-        .select {
-          padding: 0.25em;
-
-          min-width: 5em;
-          max-width: 10em;
-
-          font-size: large;
-        }
-      }
-
-      #cargo {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        margin-top: 1em;
-
-        .label {
-          max-width: 10em;
-        }
-
-        .cargo {
-          margin: 1em;
-          max-width: 15em;
-
-          text-align: center;
-        }
-
-        input {
-          text-align: center;
-          margin-left: 15%;
-        }
-
-        button {
-          margin-left: 15%;
-        }
-      }
-    }
-
-    #footer {
-      background-image: url(../img/noise_lines.png);
-
-      margin-top: 300px;
-
-      h5 {
-        color: black;
-        padding: 0.5em;
-      }
-
-      a {
-        text-decoration: none;
-      }
+    a {
+      text-decoration: none;
     }
   }
 }
