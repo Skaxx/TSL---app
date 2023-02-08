@@ -1,6 +1,6 @@
 // Trucks
 
-const Scania = {
+let Scania = {
   id: 1,
   name: "Scania",
   height: 1,
@@ -61,8 +61,8 @@ let sumWeightTrailer = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("trucks").onchange = function displayTrucks() {
-    if (this.value === "Scania") {
-      sumHeightT1 = Number(sumHeightTruck - sumHeightTruck + Scania.height);
+    if (trucks.value === "Scania") {
+      sumHeightT1 = Number((sumHeightTruck - sumHeightTruck) + Scania.height);
       document.getElementById("height").innerHTML = sumHeightT1 + " cm";
 
       sumWidthT1 = Number(sumWidthTruck - sumWidthTruck + Scania.width);
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  //ADDING VALUES
+  //ADDING VALUES FORM
 
   let btn1 = document.getElementById("submitBtn");
 
