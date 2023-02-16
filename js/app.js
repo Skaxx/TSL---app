@@ -50,77 +50,87 @@ let Goldhofer = {
 //ADDING TRUCKS & TRAILERS
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("btnAdding").onclick = function displayTotal() {
+  document.getElementById("btnAdding").onclick = function showDimensions() {
     if (trucks.value == "Scania") {
       ScaniaHeight = Number(Scania.height);
-      document.getElementById("height").innerHTML = ScaniaHeight + " cm";
+      document.getElementById("truckHeight").innerHTML = ScaniaHeight + " cm";
 
       ScaniaWidth = Number(Scania.width);
-      document.getElementById("width").innerHTML = ScaniaWidth + " cm";
+      document.getElementById("truckWidth").innerHTML = ScaniaWidth + " cm";
 
       ScaniaLong = Number(Scania.long);
-      document.getElementById("long").innerHTML = ScaniaLong + " cm";
+      document.getElementById("truckLong").innerHTML = ScaniaLong + " cm";
 
       ScaniaWeight = Number(Scania.weight);
-      document.getElementById("weight").innerHTML = ScaniaWeight + " kg";
+      document.getElementById("truckWeight").innerHTML = ScaniaWeight + " kg";
     }
 
     if (trucks.value == "Volvo") {
       VolvoHeight = Number(Volvo.height);
-      document.getElementById("height").innerHTML = VolvoHeight + " cm";
+      document.getElementById("truckHeight").innerHTML = VolvoHeight + " cm";
 
       VolvoWidth = Number(Volvo.width);
-      document.getElementById("width").innerHTML = VolvoWidth + " cm";
+      document.getElementById("truckWidth").innerHTML = VolvoWidth + " cm";
 
       VolvoLong = Number(Volvo.long);
-      document.getElementById("long").innerHTML = VolvoLong + " cm";
+      document.getElementById("truckLong").innerHTML = VolvoLong + " cm";
 
       VolvoWeight = Number(Volvo.weight);
-      document.getElementById("weight").innerHTML = VolvoWeight + " kg";
+      document.getElementById("truckWeight").innerHTML = VolvoWeight + " kg";
     }
 
     if (trucks.value == "DAF") {
       DAFHeight = Number(DAF.height);
-      document.getElementById("height").innerHTML = DAFHeight + " cm";
+      document.getElementById("truckHeight").innerHTML = DAFHeight + " cm";
 
       DAFWidth = Number(DAF.width);
-      document.getElementById("width").innerHTML = DAFWidth + " cm";
+      document.getElementById("truckWidth").innerHTML = DAFWidth + " cm";
 
       DAFLong = Number(DAF.long);
-      document.getElementById("long").innerHTML = DAFLong + " cm";
+      document.getElementById("truckLong").innerHTML = DAFLong + " cm";
 
       DAFWeight = Number(DAF.weight);
-      document.getElementById("weight").innerHTML = DAFWeight + " kg";
+      document.getElementById("truckWeight").innerHTML = DAFWeight + " kg";
     }
 
     if (trailers.value == "Nooteboom") {
       NooteboomHeight = Number(Nooteboom.height);
-      document.getElementById("height").innerHTML = NooteboomHeight + " cm";
+      document.getElementById("trailerHeight").innerHTML =
+        NooteboomHeight + " cm";
 
       NooteboomWidth = Number(Nooteboom.width);
-      document.getElementById("width").innerHTML = NooteboomWidth + " cm";
+      document.getElementById("trailerWidth").innerHTML =
+        NooteboomWidth + " cm";
 
       NooteboomLong = Number(Nooteboom.long);
-      document.getElementById("long").innerHTML = NooteboomLong + " cm";
+      document.getElementById("trailerLong").innerHTML = NooteboomLong + " cm";
 
       NooteboomWeight = Number(Nooteboom.weight);
-      document.getElementById("weight").innerHTML = NooteboomWeight + " kg";
+      document.getElementById("trailerWeight").innerHTML =
+        NooteboomWeight + " kg";
     }
 
     if (trailers.value == "Goldhofer") {
       GoldhoferHeight = Number(Goldhofer.height);
-      document.getElementById("height").innerHTML = GoldhoferHeight + " cm";
+      document.getElementById("trailerHeight").innerHTML =
+        GoldhoferHeight + " cm";
 
       GoldhoferWidth = Number(Goldhofer.width);
-      document.getElementById("width").innerHTML = GoldhoferWidth + " cm";
+      document.getElementById("trailerWidth").innerHTML =
+        GoldhoferWidth + " cm";
 
       GoldhoferLong = Number(Goldhofer.long);
-      document.getElementById("long").innerHTML = GoldhoferLong + " cm";
+      document.getElementById("trailerLong").innerHTML = GoldhoferLong + " cm";
 
       GoldhoferWeight = Number(Goldhofer.weight);
-      document.getElementById("weight").innerHTML = GoldhoferWeight + " kg";
+      document.getElementById("trailerWeight").innerHTML =
+        GoldhoferWeight + " kg";
     }
   };
+
+  document.getElementById("totalValue").onchange =
+    function showTotalDimensions() {
+    };
 
   console.log("DOM has been fully loaded and parsed.");
 });
