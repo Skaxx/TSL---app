@@ -6,6 +6,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: large;
 }
+body .content h1 {
+  padding: 1em;
+}
 body .content #selectField {
   text-align: center;
 }
@@ -15,20 +18,21 @@ body .content #selectField .select {
 body .content #selectField #btnAdding {
   margin: auto;
 }
-body .content #totalValue {
+body .content #dimensions {
   text-align: center;
 }
-body .content #totalValue h4 {
+body .content #dimensions h4 {
   margin-top: 2.5em;
 }
-body .content #totalValue .txt {
+body .content #dimensions .txt {
   padding: 0.25em;
 }
-body .content #totalValue .dimensions {
+body .content #dimensions .dimensions {
   margin: auto;
+  margin-top: -1.125em;
   background-color: white;
   color: black;
-  width: 25%;
+  width: 50%;
 }
 body #footer {
   background-image: url(../img/noise_lines.png);
