@@ -7,6 +7,10 @@ body {
   font-size: large;
 
   .content {
+    h1 {
+      padding: 1em;
+    }
+
     #selectField {
       text-align: center;
 
@@ -19,7 +23,7 @@ body {
       }
     }
 
-    #totalValue {
+    #dimensions {
       text-align: center;
 
       h4 {
@@ -32,9 +36,10 @@ body {
 
       .dimensions {
         margin: auto;
+        margin-top: -1.125em;
         background-color: white;
         color: black;
-        width: 25%;
+        width: 50%;
       }
     }
   }
