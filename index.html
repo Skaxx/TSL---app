@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>KALKULATOR ŁADUNKÓW</title>
 
-  <!-- Bootstrap v5.2 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-
-  <!-- Personal files -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/app.js"></script>
 
+  <script src="js/app.js"></script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <div class="content">
-
     <h1 class="text-center">KALKULATOR ŁADUNKÓW PONADNORMATYWNYCH</h1>
-
     <div id="main">
-
       <div id="selectField" class="row col-12">
 
         <div class="col-6">
           <h3>WYBIERZ ZESTAW</h3>
+
           <select id="trucks" name="trucks" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
-            <option id="scania" value="Scania">Scania</option>
+            <option id="scania" value="Scania">Scania S</option>
             <option id="volvo" value="Volvo">Volvo</option>
             <option id="daf" value="DAF">DAF</option>
           </select>
@@ -45,37 +41,37 @@
 
         <div class="col-6">
           <h3>WYBIERZ NACZEPĘ</h3>
+
           <select id="trailers" name="trailers" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
-            <option id="nooteboom" value="Nooteboom">Nooteboom</option>
+            <option id="nooteboom" value="Nooteboom">Nooteboom 3x5</option>
             <option id="goldhofer" value="Goldhofer">Goldhofer</option>
           </select>
         </div>
       </div>
 
       <div id="dimensions" class="column col-12">
-
         <div id="truckValue">
           <h4>WYMIARY CIĘŻARÓWKI</h4>
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="truckHeight" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="truckHeight" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="truckWidth" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="truckWidth" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="truckLong" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="truckLong" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="truckWeight" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="truckWeight" class="valueDimensions">***** ***</p>
           </div>
         </div>
 
@@ -84,73 +80,80 @@
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="trailerHeight" class="valueDimensions">Tu pokaże się wynik</p>
-          </div>
+            <p id="trailerHeight" class="valueDimensions">***** ***</p>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="trailerWidth" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="trailerWidth" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="trailerLong" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="trailerLong" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="trailerWeight" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="trailerWeight" class="valueDimensions">***** ***</p>
           </div>
         </div>
 
         <div id="cargoValue">
           <h4>WYMIARY ŁADUNKU</h4>
+          <p>Wartości należy podać w centymetrach i proszę pamiętać o uwzględnieniu wamiarów naczypy, dziękuję :)</p>
 
           <div>
             <p class="txtCargo">WYSOKOŚĆ</p>
-            <input type="text" id="cargoHeight" name="cargoHeight">
+            <input type="text" id="cargoHeight">
           </div>
+
           <div>
-            <P class="txtCargo">SZEROKOŚĆ</P>
-            <input type="text" id="cargoHeight" name="cargoWidth">
+            <p class="txtCargo">SZEROKOŚĆ</p>
+            <input type="text" id="cargoWidth">
           </div>
+
           <div>
-            <P class="txtCargo">DŁUGOŚĆ</P>
-            <input type="text" id="cargoHeight" name="cargoLong">
+            <p class="txtCargo">DŁUGOŚĆ</p>
+            <input type="text" id="cargoLength">
           </div>
+
           <div>
-            <P class="txtCargo">WAGA</P>
-            <input type="text" id="cargoHeight" name="cargoWeight">
+            <p class="txtCargo">WAGA</p>
+            <input type="text" id="cargoWeight">
           </div>
         </div>
 
         <button id="btnAdding" class="btn btn-warning" onclick="showDimensions()">Dodaj wybrane</button>
 
+        <br>
+
+        <button id="btnReset" class="btn btn-danger" onclick="resetDimensions()">Zresetuj wartości</button>
+
         <hr style="width: 75%; margin: auto; margin-top: 2.5rem;">
 
         <div id="totalValue">
-
           <h4>ŁĄCZNE WYMIARY</h4>
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="totalHeight" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="totalHeight" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="totalWidth" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="totalWidth" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="totalLong" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="totalLong" class="valueDimensions">***** ***</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="totalWeight" class="valueDimensions">Tu pokaże się wynik</p>
+            <p id="totalWeight" class="valueDimensions">***** ***</p>
           </div>
+
         </div>
       </div>
     </div>
@@ -165,7 +168,6 @@
     </div>
 
     <div class="row col-12">
-
       <div class="col-6">
         <p class="link link-secondary">2023 &copy; Wszelkie Prawa Zastrzeżone</p>
       </div>
@@ -175,6 +177,7 @@
           <p>Polityka prywatności</p>
         </a>
       </div>
+
     </div>
   </div>
 
