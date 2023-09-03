@@ -8,39 +8,56 @@ body {
 
   .content {
     h1 {
-      padding: 1em;
+      font-size: 48px;
+      color: orange;
+      padding: 1rem;
     }
 
     #selectField {
       text-align: center;
+      margin: auto;
 
       .select {
-        padding: 0.25em;
-      }
-
-      #btnAdding {
-        margin: auto;
+        padding: 0.25rem;
       }
     }
 
     #dimensions {
+      margin: auto;
       text-align: center;
 
       h4 {
-        margin-top: 2.5em;
+        margin-top: 2.5rem;
+        color: orange;
       }
 
       .txt {
-        padding: 0.25em;
+        padding: 0.25rem;
       }
 
-      .dimensions {
+      .txtCargo {
+        margin-bottom: -0.05rem;
+      }
+
+      .valueDimensions {
         margin: auto;
-        margin-top: -1.125em;
+        margin-top: -1.125rem;
         background-color: white;
         color: black;
         width: 50%;
       }
+
+      input {
+        text-align: center;
+        width: 50%;
+      }
+    }
+
+    #btnAdding {
+      width: 50%;
+      margin: auto;
+      margin-top: 2rem;
+      padding: 0.5rem;
     }
   }
 
@@ -51,7 +68,7 @@ body {
 
     h5 {
       color: black;
-      padding: 0.5em;
+      padding: 0.5rem;
     }
 
     a {

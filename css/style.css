@@ -7,32 +7,47 @@ body {
   font-size: large;
 }
 body .content h1 {
-  padding: 1em;
+  font-size: 48px;
+  color: orange;
+  padding: 1rem;
 }
 body .content #selectField {
   text-align: center;
-}
-body .content #selectField .select {
-  padding: 0.25em;
-}
-body .content #selectField #btnAdding {
   margin: auto;
 }
+body .content #selectField .select {
+  padding: 0.25rem;
+}
 body .content #dimensions {
+  margin: auto;
   text-align: center;
 }
 body .content #dimensions h4 {
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
+  color: orange;
 }
 body .content #dimensions .txt {
-  padding: 0.25em;
+  padding: 0.25rem;
 }
-body .content #dimensions .dimensions {
+body .content #dimensions .txtCargo {
+  margin-bottom: -0.05rem;
+}
+body .content #dimensions .valueDimensions {
   margin: auto;
-  margin-top: -1.125em;
+  margin-top: -1.125rem;
   background-color: white;
   color: black;
   width: 50%;
+}
+body .content #dimensions input {
+  text-align: center;
+  width: 50%;
+}
+body .content #btnAdding {
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0.5rem;
 }
 body #footer {
   background-image: url(../img/noise_lines.png);
@@ -40,7 +55,7 @@ body #footer {
 }
 body #footer h5 {
   color: black;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 body #footer a {
   text-decoration: none;
