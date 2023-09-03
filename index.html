@@ -33,7 +33,7 @@
 
       <div id="selectField" class="row col-12">
 
-        <div class="col-4">
+        <div class="col-6">
           <h3>WYBIERZ ZESTAW</h3>
           <select id="trucks" name="trucks" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
@@ -43,7 +43,7 @@
           </select>
         </div>
 
-        <div class="col-4">
+        <div class="col-6">
           <h3>WYBIERZ NACZEPĘ</h3>
           <select id="trailers" name="trailers" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
@@ -51,86 +51,108 @@
             <option id="goldhofer" value="Goldhofer">Goldhofer</option>
           </select>
         </div>
-        <button id="btnAdding" class="btn btn-success col-4" onclick="showDimensions()">Dodaj wybrane</button>
       </div>
 
-      <div id="dimensions" class="row col-12">
+      <div id="dimensions" class="column col-12">
 
-        <div id="truckValue" class="col-4">
+        <div id="truckValue">
           <h4>WYMIARY CIĘŻARÓWKI</h4>
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="truckHeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="truckHeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="truckWidth" class="dimensions">Tu pokaże się wynik</p>
+            <p id="truckWidth" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="truckLong" class="dimensions">Tu pokaże się wynik</p>
+            <p id="truckLong" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="truckWeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="truckWeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
         </div>
 
-        <div id="trailerValue" class="col-4">
+        <div id="trailerValue">
           <h4>WYMIARY NACZEPY</h4>
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="trailerHeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="trailerHeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="trailerWidth" class="dimensions">Tu pokaże się wynik</p>
+            <p id="trailerWidth" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="trailerLong" class="dimensions">Tu pokaże się wynik</p>
+            <p id="trailerLong" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="trailerWeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="trailerWeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
         </div>
 
+        <div id="cargoValue">
+          <h4>WYMIARY ŁADUNKU</h4>
 
-        <div id="totalValue" class="col-4" onchange="showTotalDimensions()">
+          <div>
+            <p class="txtCargo">WYSOKOŚĆ</p>
+            <input type="text" id="cargoHeight" name="cargoHeight">
+          </div>
+          <div>
+            <P class="txtCargo">SZEROKOŚĆ</P>
+            <input type="text" id="cargoHeight" name="cargoWidth">
+          </div>
+          <div>
+            <P class="txtCargo">DŁUGOŚĆ</P>
+            <input type="text" id="cargoHeight" name="cargoLong">
+          </div>
+          <div>
+            <P class="txtCargo">WAGA</P>
+            <input type="text" id="cargoHeight" name="cargoWeight">
+          </div>
+        </div>
+
+        <button id="btnAdding" class="btn btn-warning" onclick="showDimensions()">Dodaj wybrane</button>
+
+        <hr style="width: 75%; margin: auto; margin-top: 2.5rem;">
+
+        <div id="totalValue">
+
           <h4>ŁĄCZNE WYMIARY</h4>
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="totalHeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="totalHeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="totalWidth" class="dimensions">Tu pokaże się wynik</p>
+            <p id="totalWidth" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="totalLong" class="dimensions">Tu pokaże się wynik</p>
+            <p id="totalLong" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="totalWeight" class="dimensions">Tu pokaże się wynik</p>
+            <p id="totalWeight" class="valueDimensions">Tu pokaże się wynik</p>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 
@@ -145,7 +167,7 @@
     <div class="row col-12">
 
       <div class="col-6">
-        <p class="link link-secondary">2022 &copy; Wszelkie Prawa Zastrzeżone</p>
+        <p class="link link-secondary">2023 &copy; Wszelkie Prawa Zastrzeżone</p>
       </div>
 
       <div class="col-6">
