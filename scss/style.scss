@@ -8,7 +8,6 @@ body {
 
   .content {
     h1 {
-      font-size: 48px;
       color: orange;
       padding: 1rem;
     }
@@ -19,6 +18,10 @@ body {
 
       .select {
         padding: 0.25rem;
+      }
+
+      option {
+        text-align: center;
       }
     }
 
@@ -54,7 +57,14 @@ body {
     }
 
     #btnAdding {
-      width: 50%;
+      width: 25%;
+      margin: auto;
+      margin-top: 2rem;
+      padding: 0.5rem;
+    }
+
+    #btnReset {
+      width: 25%;
       margin: auto;
       margin-top: 2rem;
       padding: 0.5rem;

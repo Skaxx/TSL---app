@@ -7,7 +7,6 @@ body {
   font-size: large;
 }
 body .content h1 {
-  font-size: 48px;
   color: orange;
   padding: 1rem;
 }
@@ -17,6 +16,9 @@ body .content #selectField {
 }
 body .content #selectField .select {
   padding: 0.25rem;
+}
+body .content #selectField option {
+  text-align: center;
 }
 body .content #dimensions {
   margin: auto;
@@ -44,7 +46,13 @@ body .content #dimensions input {
   width: 50%;
 }
 body .content #btnAdding {
-  width: 50%;
+  width: 25%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+body .content #btnReset {
+  width: 25%;
   margin: auto;
   margin-top: 2rem;
   padding: 0.5rem;
