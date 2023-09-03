@@ -1,5 +1,4 @@
 // Trucks
-
 let Scania = {
   id: 1,
   name: "Scania",
@@ -28,7 +27,6 @@ let DAF = {
 };
 
 // Trailers
-
 let Nooteboom = {
   id: 1,
   name: "Nooteboom",
@@ -48,91 +46,71 @@ let Goldhofer = {
 };
 
 //ADDING TRUCKS & TRAILERS
-
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnAdding").onclick = function showDimensions() {
-    if (trucks.value == "Scania") {
-      ScaniaHeight = Number(Scania.height);
-      document.getElementById("truckHeight").innerHTML = ScaniaHeight + " cm";
+    let trucks = document.getElementById("trucks").value;
+    let trailers = document.getElementById("trailers").value;
 
-      ScaniaWidth = Number(Scania.width);
-      document.getElementById("truckWidth").innerHTML = ScaniaWidth + " cm";
+    let trucksHeight = 0;
+    let trucksWidth = 0;
+    let trucksLong = 0;
+    let trucksWeight = 0;
+    let trailersHeight = 0;
+    let trailersWidth = 0;
+    let trailersLong = 0;
+    let trailersWeight = 0;
 
-      ScaniaLong = Number(Scania.long);
-      document.getElementById("truckLong").innerHTML = ScaniaLong + " cm";
-
-      ScaniaWeight = Number(Scania.weight);
-      document.getElementById("truckWeight").innerHTML = ScaniaWeight + " kg";
+    if (trucks == "Scania") {
+      trucksHeight = Scania.height;
+      trucksWidth = Scania.width;
+      trucksLong = Scania.long;
+      trucksWeight = Scania.weight;
+    } else if (trucks == "Volvo") {
+      trucksHeight = Volvo.height;
+      trucksWidth = Volvo.width;
+      trucksLong = Volvo.long;
+      trucksWeight = Volvo.weight;
+    } else if (trucks == "DAF") {
+      trucksHeight = DAF.height;
+      trucksWidth = DAF.width;
+      trucksLong = DAF.long;
+      trucksWeight = DAF.weight;
     }
 
-    if (trucks.value == "Volvo") {
-      VolvoHeight = Number(Volvo.height);
-      document.getElementById("truckHeight").innerHTML = VolvoHeight + " cm";
-
-      VolvoWidth = Number(Volvo.width);
-      document.getElementById("truckWidth").innerHTML = VolvoWidth + " cm";
-
-      VolvoLong = Number(Volvo.long);
-      document.getElementById("truckLong").innerHTML = VolvoLong + " cm";
-
-      VolvoWeight = Number(Volvo.weight);
-      document.getElementById("truckWeight").innerHTML = VolvoWeight + " kg";
+    if (trailers == "Nooteboom") {
+      trailersHeight = Nooteboom.height;
+      trailersWidth = Nooteboom.width;
+      trailersLong = Nooteboom.long;
+      trailersWeight = Nooteboom.weight;
+    } else if (trailers == "Goldhofer") {
+      trailersHeight = Goldhofer.height;
+      trailersWidth = Goldhofer.width;
+      trailersLong = Goldhofer.long;
+      trailersWeight = Goldhofer.weight;
     }
 
-    if (trucks.value == "DAF") {
-      DAFHeight = Number(DAF.height);
-      document.getElementById("truckHeight").innerHTML = DAFHeight + " cm";
+    let totalHeight = trucksHeight + trailersHeight;
+    let totalWidth = trucksWidth + trailersWidth;
+    let totalLong = trucksLong + trailersLong;
+    let totalWeight = trucksWeight + trailersWeight;
 
-      DAFWidth = Number(DAF.width);
-      document.getElementById("truckWidth").innerHTML = DAFWidth + " cm";
+    document.getElementById("truckHeight").textContent = trucksHeight + " cm";
+    document.getElementById("truckWidth").textContent = trucksWidth + " cm";
+    document.getElementById("truckLong").textContent = trucksLong + " cm";
+    document.getElementById("truckWeight").textContent = trucksWeight + " kg";
 
-      DAFLong = Number(DAF.long);
-      document.getElementById("truckLong").innerHTML = DAFLong + " cm";
+    document.getElementById("trailerHeight").textContent =
+      trailersHeight + " cm";
+    document.getElementById("trailerWidth").textContent = trailersWidth + " cm";
+    document.getElementById("trailerLong").textContent = trailersLong + " cm";
+    document.getElementById("trailerWeight").textContent =
+      trailersWeight + " kg";
 
-      DAFWeight = Number(DAF.weight);
-      document.getElementById("truckWeight").innerHTML = DAFWeight + " kg";
-    }
-
-    if (trailers.value == "Nooteboom") {
-      NooteboomHeight = Number(Nooteboom.height);
-      document.getElementById("trailerHeight").innerHTML =
-        NooteboomHeight + " cm";
-
-      NooteboomWidth = Number(Nooteboom.width);
-      document.getElementById("trailerWidth").innerHTML =
-        NooteboomWidth + " cm";
-
-      NooteboomLong = Number(Nooteboom.long);
-      document.getElementById("trailerLong").innerHTML = NooteboomLong + " cm";
-
-      NooteboomWeight = Number(Nooteboom.weight);
-      document.getElementById("trailerWeight").innerHTML =
-        NooteboomWeight + " kg";
-    }
-
-    if (trailers.value == "Goldhofer") {
-      GoldhoferHeight = Number(Goldhofer.height);
-      document.getElementById("trailerHeight").innerHTML =
-        GoldhoferHeight + " cm";
-
-      GoldhoferWidth = Number(Goldhofer.width);
-      document.getElementById("trailerWidth").innerHTML =
-        GoldhoferWidth + " cm";
-
-      GoldhoferLong = Number(Goldhofer.long);
-      document.getElementById("trailerLong").innerHTML = GoldhoferLong + " cm";
-
-      GoldhoferWeight = Number(Goldhofer.weight);
-      document.getElementById("trailerWeight").innerHTML =
-        GoldhoferWeight + " kg";
-    }
+    document.getElementById("totalHeight").textContent = totalHeight + " cm";
+    document.getElementById("totalWidth").textContent = totalWidth + " cm";
+    document.getElementById("totalLong").textContent = totalLong + " cm";
+    document.getElementById("totalWeight").textContent = totalWeight + " kg";
   };
-
-  document.getElementById("totalValue").onchange =
-    function showTotalDimensions() {
-    };
 
   console.log("DOM has been fully loaded and parsed.");
 });
-
-//END OF ADDING TRUCKS & TRAILERS
