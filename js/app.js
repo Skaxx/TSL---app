@@ -1,49 +1,54 @@
 // Trucks
-let Scania = {
-  id: 1,
-  name: "Scania S",
-  height: 1,
-  width: 1,
-  long: 1,
-  weight: 1,
-};
-
-let Volvo = {
-  id: 2,
-  name: "Volvo",
-  height: 2,
-  width: 2,
-  long: 2,
-  weight: 2,
-};
-
-let DAF = {
-  id: 3,
-  name: "DAF",
-  height: 3,
-  width: 3,
-  long: 3,
-  weight: 3,
-};
+let ScaniaR450_4x4 = {
+    id: 1.1,
+    name: "Scania R450 4x4",
+    height: 333,
+    width: 255,
+    long: 629,
+    weight: 8500,
+  },
+  ScaniaS770_8x4 = {
+    id: 1.2,
+    name: "Scania S770 8x4",
+    height: 375,
+    width: 265,
+    long: 738,
+    weight: 9850,
+  },
+  Volvo = {
+    id: 2,
+    name: "Volvo",
+    height: 2,
+    width: 2,
+    long: 2,
+    weight: 2,
+  },
+  DAF = {
+    id: 3,
+    name: "DAF",
+    height: 3,
+    width: 3,
+    long: 3,
+    weight: 3,
+  };
 
 // Trailers
-let Nooteboom = {
-  id: 1,
-  name: "Nooteboom Tiefbett 3+5",
-  height: 10,
-  width: 10,
-  long: 10,
-  weight: 10,
-};
-
-let Goldhofer = {
-  id: 2,
-  name: "Goldhofer",
-  height: 20,
-  width: 20,
-  long: 20,
-  weight: 20,
-};
+let NooteboomEuro_2 = {
+    id: 1.1,
+    name: "Nooteboom Euro 2",
+    height: 50,
+    width: 252,
+    long: 1252,
+    weight: 9840,
+  },
+  Goldhofer = {
+    id: 2,
+    name: "Goldhofer",
+    height: 20,
+    width: 20,
+    long: 20,
+    weight: 20,
+  };
 
 // Function to calculate and display dimensions
 function showDimensions() {
@@ -59,11 +64,16 @@ function showDimensions() {
   let trailersLong = 0;
   let trailersWeight = 0;
 
-  if (trucks == "Scania") {
-    trucksHeight = Scania.height;
-    trucksWidth = Scania.width;
-    trucksLong = Scania.long;
-    trucksWeight = Scania.weight;
+  if (trucks == "ScaniaR450_4x4") {
+    trucksHeight = ScaniaR450_4x4.height;
+    trucksWidth = ScaniaR450_4x4.width;
+    trucksLong = ScaniaR450_4x4.long;
+    trucksWeight = ScaniaR450_4x4.weight;
+  } else if (trucks == "ScaniaS770_8x4") {
+    trucksHeight = ScaniaS770_8x4.height;
+    trucksWidth = ScaniaS770_8x4.width;
+    trucksLong = ScaniaS770_8x4.long;
+    trucksWeight = ScaniaS770_8x4.weight;
   } else if (trucks == "Volvo") {
     trucksHeight = Volvo.height;
     trucksWidth = Volvo.width;
@@ -76,11 +86,11 @@ function showDimensions() {
     trucksWeight = DAF.weight;
   }
 
-  if (trailers == "Nooteboom") {
-    trailersHeight = Nooteboom.height;
-    trailersWidth = Nooteboom.width;
-    trailersLong = Nooteboom.long;
-    trailersWeight = Nooteboom.weight;
+  if (trailers == "NooteboomEuro_2") {
+    trailersHeight = NooteboomEuro_2.height;
+    trailersWidth = NooteboomEuro_2.width;
+    trailersLong = NooteboomEuro_2.long;
+    trailersWeight = NooteboomEuro_2.weight;
   } else if (trailers == "Goldhofer") {
     trailersHeight = Goldhofer.height;
     trailersWidth = Goldhofer.width;
@@ -100,6 +110,44 @@ function showDimensions() {
   let totalWidth = trucksWidth + trailersWidth + cargoWidth;
   let totalLong = trucksLong + trailersLong + cargoLength;
   let totalWeight = trucksWeight + trailersWeight + cargoWeight;
+
+  if (trucksHeight >= trailersHeight) {
+    totalHeight = trucksHeight + cargoHeight;
+  } else {
+    totalHeight = trucksHeight + cargoHeight;
+  }
+
+  if (trailersWidth <= trucksWidth) {
+    totalWidth = trucksWidth + cargoWidth;
+  } else {
+    totalWidth = trailersWidth + cargoWidth;
+  }
+
+  let cargoHeightDiff = cargoHeight - trucksHeight;
+  let cargoWidthDiff = cargoWidth - trucksWidth;
+  let cargoLongDiff = cargoLength - trailersLong;
+
+  if (cargoHeightDiff > 0) {
+    totalHeight = trucksHeight + cargoHeightDiff;
+  } else {
+    totalHeight = trucksHeight;
+  }
+
+  if (cargoWidthDiff > 0) {
+    totalWidth = trucksWidth + cargoWidthDiff;
+  } else {
+    totalWidth = trucksWidth;
+  }
+
+  if (cargoLongDiff > 0) {
+    totalLong = trucksLong + cargoLongDiff;
+  } else {
+    totalLong = trucksLong + trailersLong;
+  }
+
+  if (trucks !== "Wybierz" && trailers !== "Wybierz") {
+    totalLong -= 200;
+  }
 
   document.getElementById("truckHeight").textContent = trucksHeight + " cm";
   document.getElementById("truckWidth").textContent = trucksWidth + " cm";
@@ -131,20 +179,20 @@ function resetDimensions() {
   document.getElementById("cargoLength").value = "";
   document.getElementById("cargoWeight").value = "";
 
-  document.getElementById("truckHeight").textContent = "***** ***";
-  document.getElementById("truckWidth").textContent = "***** ***";
-  document.getElementById("truckLong").textContent = "***** ***";
-  document.getElementById("truckWeight").textContent = "***** ***";
-  document.getElementById("trailerHeight").textContent = "***** ***";
-  document.getElementById("trailerWidth").textContent = "***** ***";
-  document.getElementById("trailerLong").textContent = "***** ***";
-  document.getElementById("trailerWeight").textContent = "***** ***";
-  document.getElementById("cargoHeight").textContent = "***** ***";
-  document.getElementById("cargoWidth").textContent = "***** ***";
-  document.getElementById("cargoLength").textContent = "***** ***";
-  document.getElementById("cargoWeight").textContent = "***** ***";
-  document.getElementById("totalHeight").textContent = "***** ***";
-  document.getElementById("totalWidth").textContent = "***** ***";
-  document.getElementById("totalLong").textContent = "***** ***";
-  document.getElementById("totalWeight").textContent = "***** ***";
+  document.getElementById("truckHeight").textContent = "...";
+  document.getElementById("truckWidth").textContent = "...";
+  document.getElementById("truckLong").textContent = "...";
+  document.getElementById("truckWeight").textContent = "...";
+  document.getElementById("trailerHeight").textContent = "...";
+  document.getElementById("trailerWidth").textContent = "...";
+  document.getElementById("trailerLong").textContent = "...";
+  document.getElementById("trailerWeight").textContent = "...";
+  document.getElementById("cargoHeight").textContent = "...";
+  document.getElementById("cargoWidth").textContent = "...";
+  document.getElementById("cargoLength").textContent = "...";
+  document.getElementById("cargoWeight").textContent = "...";
+  document.getElementById("totalHeight").textContent = "...";
+  document.getElementById("totalWidth").textContent = "...";
+  document.getElementById("totalLong").textContent = "...";
+  document.getElementById("totalWeight").textContent = "...";
 }
