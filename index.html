@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/app.js"></script>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -33,7 +33,8 @@
 
           <select id="trucks" name="trucks" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
-            <option id="scania" value="Scania">Scania S</option>
+            <option id="scania1" value="ScaniaR450_4x4">Scania R450 4x4</option>
+            <option id="scania2" value="ScaniaS770_8x4">Scania S770 8x4</option>
             <option id="volvo" value="Volvo">Volvo</option>
             <option id="daf" value="DAF">DAF</option>
           </select>
@@ -44,7 +45,7 @@
 
           <select id="trailers" name="trailers" class="select">
             <option id="none" value="none" selected>NIE WYBRANO</option>
-            <option id="nooteboom" value="Nooteboom">Nooteboom 3x5</option>
+            <option id="nooteboom" value="NooteboomEuro_2">Nooteboom Euro 2</option>
             <option id="goldhofer" value="Goldhofer">Goldhofer</option>
           </select>
         </div>
@@ -56,22 +57,22 @@
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="truckHeight" class="valueDimensions">***** ***</p>
+            <p id="truckHeight" class="valueDimensions">...</p>
           </div>
 
           <div>
             <p class="txt">SZEROKOŚĆ</p>
-            <p id="truckWidth" class="valueDimensions">***** ***</p>
+            <p id="truckWidth" class="valueDimensions">...</p>
           </div>
 
           <div>
             <p class="txt">DŁUGOŚĆ</p>
-            <p id="truckLong" class="valueDimensions">***** ***</p>
+            <p id="truckLong" class="valueDimensions">...</p>
           </div>
 
           <div>
             <p class="txt">WAGA</p>
-            <p id="truckWeight" class="valueDimensions">***** ***</p>
+            <p id="truckWeight" class="valueDimensions">...</p>
           </div>
         </div>
 
@@ -80,106 +81,119 @@
 
           <div>
             <p class="txt">WYSOKOŚĆ</p>
-            <p id="trailerHeight" class="valueDimensions">***** ***</p>
+            <p id="trailerHeight" class="valueDimensions">...</p>
 
-          <div>
-            <p class="txt">SZEROKOŚĆ</p>
-            <p id="trailerWidth" class="valueDimensions">***** ***</p>
+            <div>
+              <p class="txt">SZEROKOŚĆ</p>
+              <p id="trailerWidth" class="valueDimensions">...</p>
+            </div>
+
+            <div>
+              <p class="txt">DŁUGOŚĆ</p>
+              <p id="trailerLong" class="valueDimensions">...</p>
+            </div>
+
+            <div>
+              <p class="txt">WAGA</p>
+              <p id="trailerWeight" class="valueDimensions">...</p>
+            </div>
           </div>
 
-          <div>
-            <p class="txt">DŁUGOŚĆ</p>
-            <p id="trailerLong" class="valueDimensions">***** ***</p>
+          <div id="cargoValue">
+            <h4>WYMIARY ŁADUNKU</h4>
+            <p>Wartości należy podać w CM, a wagę w KG - dziękuję :)</p>
+
+            <div>
+              <p class="txtCargo">WYSOKOŚĆ</p>
+              <input type="text" id="cargoHeight">
+            </div>
+
+            <div>
+              <p class="txtCargo">SZEROKOŚĆ</p>
+              <input type="text" id="cargoWidth">
+            </div>
+
+            <div>
+              <p class="txtCargo">DŁUGOŚĆ</p>
+              <input type="text" id="cargoLength">
+            </div>
+
+            <div>
+              <p class="txtCargo">WAGA</p>
+              <input type="text" id="cargoWeight">
+            </div>
           </div>
 
-          <div>
-            <p class="txt">WAGA</p>
-            <p id="trailerWeight" class="valueDimensions">***** ***</p>
+          <button id="btnAdding" class="btn btn-warning" onclick="showDimensions()">Dodaj wybrane</button>
+
+          <br>
+
+          <button id="btnReset" class="btn btn-danger" onclick="resetDimensions()">Zresetuj wartości</button>
+
+          <hr style="width: 75%; margin: auto; margin-top: 2.5rem;">
+
+          <div id="totalValue">
+            <h4>ŁĄCZNE WYMIARY</h4>
+
+            <div>
+              <p class="txt">WYSOKOŚĆ</p>
+              <p id="totalHeight" class="valueDimensions">...</p>
+            </div>
+
+            <div>
+              <p class="txt">SZEROKOŚĆ</p>
+              <p id="totalWidth" class="valueDimensions">...</p>
+            </div>
+
+            <div>
+              <p class="txt">DŁUGOŚĆ</p>
+              <p id="totalLong" class="valueDimensions">...</p>
+            </div>
+
+            <div>
+              <p class="txt">WAGA</p>
+              <p id="totalWeight" class="valueDimensions">...</p>
+            </div>
+
           </div>
-        </div>
-
-        <div id="cargoValue">
-          <h4>WYMIARY ŁADUNKU</h4>
-          <p>Wartości należy podać w centymetrach i proszę pamiętać o uwzględnieniu wamiarów naczypy, dziękuję :)</p>
-
-          <div>
-            <p class="txtCargo">WYSOKOŚĆ</p>
-            <input type="text" id="cargoHeight">
-          </div>
-
-          <div>
-            <p class="txtCargo">SZEROKOŚĆ</p>
-            <input type="text" id="cargoWidth">
-          </div>
-
-          <div>
-            <p class="txtCargo">DŁUGOŚĆ</p>
-            <input type="text" id="cargoLength">
-          </div>
-
-          <div>
-            <p class="txtCargo">WAGA</p>
-            <input type="text" id="cargoWeight">
-          </div>
-        </div>
-
-        <button id="btnAdding" class="btn btn-warning" onclick="showDimensions()">Dodaj wybrane</button>
-
-        <br>
-
-        <button id="btnReset" class="btn btn-danger" onclick="resetDimensions()">Zresetuj wartości</button>
-
-        <hr style="width: 75%; margin: auto; margin-top: 2.5rem;">
-
-        <div id="totalValue">
-          <h4>ŁĄCZNE WYMIARY</h4>
-
-          <div>
-            <p class="txt">WYSOKOŚĆ</p>
-            <p id="totalHeight" class="valueDimensions">***** ***</p>
-          </div>
-
-          <div>
-            <p class="txt">SZEROKOŚĆ</p>
-            <p id="totalWidth" class="valueDimensions">***** ***</p>
-          </div>
-
-          <div>
-            <p class="txt">DŁUGOŚĆ</p>
-            <p id="totalLong" class="valueDimensions">***** ***</p>
-          </div>
-
-          <div>
-            <p class="txt">WAGA</p>
-            <p id="totalWeight" class="valueDimensions">***** ***</p>
-          </div>
-
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="footer" class="text-center">
-    <div>
-      <h5>AUTORSTWA:</h5>
-      <a href="https://patryk-pietrzyk.pl" target="_blank" class="link link-secondary">
-        <p>Patryk Pietrzyk</p>
-      </a>
-    </div>
-
-    <div class="row col-12">
-      <div class="col-6">
-        <p class="link link-secondary">2023 &copy; Wszelkie Prawa Zastrzeżone</p>
-      </div>
-
-      <div class="col-6">
-        <a href="privacy.html" class="link link-secondary">
-          <p>Polityka prywatności</p>
+    <div id="footer" class="text-center">
+      <div>
+        <h5>AUTORSTWA:</h5>
+        <a href="https://patryk-pietrzyk.pl" target="_blank" class="link link-secondary">
+          <p>Patryk Pietrzyk</p>
         </a>
       </div>
-
     </div>
-  </div>
+
+    <!--
+
+Scania R450 4x4 6x2
+Scania S770 4x2 6x2 6x4 8x4
+
+Volvo 500 FH16 4x2 6x2 8x4
+Volvo 750 FH16 4x2 6x2 8x4
+
+DAF XF 530 4x2 6x2
+DAF XG+ 450 480 520 4x2
+
+Mercedes-Benz Actros 2653 6x2
+Mercedes-Benz Actros 4163 8x4
+
+MAN TGX 2648 6x2
+MAN TGX 4165 8x4
+
+------------------------------
+
+Nooteboom telesatle / modułowe 
+Goldhofer semi 3/4 -> 10
+Fainmoville tifbet 2
+Maxtrailer 
+
+  -->
 
 </body>
 
