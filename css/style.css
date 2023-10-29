@@ -4,7 +4,7 @@ body {
   background-image: url(../img/repeated-square-dark.png);
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: large;
+  font-size: larger;
 }
 body .content h1 {
   color: orange;
